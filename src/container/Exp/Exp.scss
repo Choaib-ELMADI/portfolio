@@ -1,0 +1,31 @@
+.experiences {
+
+    &__wrapper {
+        margin-top: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        .experience-modal {
+            background: var(--gray__clr__trs);
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            animation: blinking 2s ease-in-out infinite;
+
+            @keyframes blinking {
+                0%, 100% {
+                    opacity: 1;
+                }
+                40% {
+                    opacity: .2;
+                }
+                70% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

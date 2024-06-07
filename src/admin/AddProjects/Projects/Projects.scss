@@ -1,0 +1,93 @@
+.available-projects {
+    width: 100%;
+
+    .no-available-projects {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .available-projects-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+
+        .available-project-wrapper {
+            position: relative;
+            overflow: hidden;
+
+            background: var(--gray__clr__trs);
+            color: var(--white__clr);
+            border-radius: 8px;
+
+            .project-profile {
+                margin-bottom: .25rem;
+                
+                img {
+                    background: var(--gray__clr);
+
+                    width: 100%;
+                    aspect-ratio: 1.6;
+                    object-fit: cover;
+                }
+            }
+
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline: .5rem;
+
+                p {
+                    color: var(--special__1);
+                    background: var(--special__1__trs);
+                    padding: .25rem .5rem .3rem .5rem;
+                    border-radius: 4px;
+                }
+            }
+            
+            .desc {
+                padding-inline: .5rem;
+                margin-bottom: .5rem;
+            }
+
+            button {
+                position: absolute;
+                top: .35rem;
+                right: calc(-6rem);
+
+                border: 0;
+                outline: 0;
+
+                width: 5rem;
+                text-align: center;
+                color: var(--red__clr);
+                background: var(--black__clr__trs);
+                backdrop-filter: blur(4px);
+                font-size: cacl(var(--normal__size) - 2px);
+                padding: .5rem;
+                border-radius: 6px;
+                transition: .2s;
+                cursor: pointer;
+            }
+
+            &:hover {
+                button {
+                    right: .5rem;
+                }
+            }
+        }
+
+        @media screen and (width <= 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (width <= 850px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (width <= 600px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

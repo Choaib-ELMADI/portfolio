@@ -1,0 +1,86 @@
+.available-experiences {
+    width: 100%;
+
+    .no-available-experiences {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .available-experiences-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+
+        .available-experience-wrapper {
+            background: var(--gray__clr__trs);
+            padding: 1rem .5rem .5rem .5rem;
+            border-radius: 10px;
+            color: var(--white__clr);
+
+            position: relative;
+
+            h1 {
+                width: max-content;
+                margin: 0 auto;
+                margin-bottom: 1rem;
+
+                font-size: var(--medium__size);
+                background: linear-gradient(
+                    170deg,
+                    var(--red__clr),
+                    var(--special__1),
+                );
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+
+            .job {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: .5rem;
+            }
+
+            button {
+                position: absolute;
+                top: .5rem;
+                right: .5rem;
+
+                background: var(--red__clr__trs);
+                color: var(--red__clr);
+                font-size: var(--normal__size);
+                font-weight: bold;
+                border: 0;
+                outline: none;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                cursor: pointer;
+
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            &:hover {
+                button {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        @media screen and (width <= 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (width <= 850px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (width <= 600px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

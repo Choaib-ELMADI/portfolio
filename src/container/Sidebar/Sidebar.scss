@@ -1,0 +1,116 @@
+.sidebar {
+    width: 60px;
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: var(--black__clr);
+    padding-top: 90px;
+
+    &::-webkit-scrollbar {
+        width: 1px;
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+
+    .logo {
+        color: var(--verywhite__clr);
+        background: var(--gray__clr);
+        padding: .25rem .75rem;
+        border-radius: 6px;
+        user-select: none;
+
+        position: fixed;
+        top: 25px;
+        margin: 0 auto;
+
+        h2 {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -7px;
+                bottom: 5px;
+
+                width: 6px;
+                height: 6px;
+                background: var(--special__1);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .links {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        display: flex;
+        flex-direction: column;
+
+        .link {
+            width: 100%;
+            padding: 1.5rem 1rem;
+            font-size: var(--normal__size);
+            border-right: 1.5px solid transparent;
+            transition: .2s;
+
+            text-decoration: none;
+            color: var(--white__clr);
+
+            writing-mode: vertical-rl;
+
+            display: grid;
+            place-items: center;
+
+            &:is(:hover, .active) {
+                border-right: 1.5px solid var(--special__1);
+                background: var(--main__bg);
+                color: var(--verywhite__clr);
+            }
+        }
+    }
+
+    .login-admin {
+        background: var(--special__1__trs);
+        padding: .35rem;
+        border-radius: 50%;
+        margin-block: auto 1rem;
+
+        display: grid;
+        place-items: center;
+    }
+
+    @media screen and (width <= 900px) {
+        padding-top: 75px;
+
+        .logo {
+            top: 17px;
+        }
+    }
+
+    @media screen and (width <= 700px) {
+        padding-top: 67px;
+        left: -80px;
+        transition: .3s;
+
+        &.active {
+            left: 0;
+        }
+
+        .logo {
+            cursor: pointer;
+            top: 14px;
+            left: 10px;
+        }
+    }
+}

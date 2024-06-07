@@ -1,0 +1,83 @@
+.add-new-experience {
+    width: 100%;
+
+    form {
+        width: 100%;
+
+        .experience-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem 1.5rem;
+
+            .input-group {
+                position: relative;
+
+                input {
+                    width: 100%;
+                    background: transparent;
+                    border: 0;
+                    border-bottom: 3px solid var(--gray__clr);
+                    outline: none;
+                    transition: .2s;
+
+                    color: var(--white__clr);
+                    font-size: var(--normal__size);
+                    padding: .5rem;
+                }
+
+                label {
+                    position: absolute;
+                    left: .5rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: .2s;
+                    pointer-events: none;
+
+                    font-size: calc(var(--normal__size) - 1px);
+                    color: var(--white__clr);
+                    opacity: .6;
+                }
+
+                &:has(input:focus, input:valid) {
+                    label {
+                        top: -.7rem;
+                        left: 0;
+                        color: var(--special__1);
+                        font-size: calc(var(--normal__size) - 4px);
+                    }
+
+                    input {
+                        border-bottom-color: var(--special__1);
+                    }
+                }
+            }
+
+            @media screen and (width <= 1050px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media screen and (width <= 700px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        button {
+            background: transparent;
+            border: 1.5px dashed currentColor;
+            outline: none;
+
+            margin-top: 1.5rem;
+            color: var(--white__clr);
+            font-size: calc(var(--normal__size) + 2px);
+            padding: .5rem 1rem;
+            border-radius: 12px;
+            transition: .2s;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--special__1);
+                background: var(--special__1__trs);
+            }
+        }
+    }
+}

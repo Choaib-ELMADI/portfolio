@@ -1,0 +1,27 @@
+.langs-container {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	z-index: 1;
+
+	&__lng {
+		font-size: calc(var(--normal__size) - 4px);
+		color: var(--white__clr);
+		padding: 0.15rem 0.75rem 0.25rem;
+		user-select: none;
+		white-space: nowrap;
+
+		background: transparent;
+		border: 1px solid var(--white__clr);
+		border-radius: 20px;
+		outline: none;
+		transition: background 0.2s, color 0.2s, border 0.2s;
+		cursor: pointer;
+
+		&:is(:hover, .active) {
+			background: var(--special__1__trs);
+			color: var(--special__1);
+			border-color: currentColor;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+:root {
+	--main__bg: #111111;
+	--verywhite__clr: rgba(235, 236, 243, 1);
+	--white__clr: rgba(235, 236, 243, 0.7);
+	--white__clr__trs2: rgba(235, 236, 243, 0.2);
+	--black__clr: #080808;
+	--black__clr__trs: rgba(8, 8, 8, 0.6);
+	--gray__clr: #232323;
+	--gray__clr__trs: rgba(128, 128, 128, 0.1);
+	--red__clr: red;
+	--red__clr__trs: rgba(255, 0, 0, 0.2);
+	--green__clr: green;
+	--green__clr__trs: rgba(0, 128, 0, 0.2);
+	--special__1: #6b2fef;
+	--special__1__trs: #6c2fef33;
+	--special__2: #9b07df;
+	--special__2__trs: rgba(155, 7, 223, 0.2);
+
+	--verybig__size: 70px;
+	--big__size: 50px;
+	--medium__size: 34px;
+	--normal__size: 19px;
+}
+
+@media screen and (width <= 900px) {
+	:root {
+		--verybig__size: 60px;
+		--big__size: 40px;
+		--medium__size: 30px;
+	}
+}
+
+@media screen and (width <= 700px) {
+	:root {
+		--verybig__size: 50px;
+		--big__size: 36px;
+		--medium__size: 26px;
+		--normal__size: 18px;
+	}
+}
+
+@media screen and (width <= 500px) {
+	:root {
+		--verybig__size: 40px;
+		--big__size: 32px;
+		--medium__size: 22px;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: system-ui, sans-serif;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--main__bg);
+	color: var(--white__color);
+}
+
+*::selection {
+	color: var(--black__clr);
+	background: var(--special__1);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: var(--white__clr__trs2);
+}

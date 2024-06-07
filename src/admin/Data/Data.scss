@@ -1,0 +1,63 @@
+.add-more-projects {
+	&.yellow {
+		--special__1: rgb(226, 239, 47);
+		--special__1__trs: rgba(226, 239, 47, 0.2);
+	}
+	&.red {
+		--special__1: rgb(239, 63, 47);
+		--special__1__trs: rgba(239, 63, 47, 0.2);
+	}
+	&.orange {
+		--special__1: rgb(226, 145, 30);
+		--special__1__trs: rgba(226, 145, 30, 0.2);
+	}
+	&.green {
+		--special__1: rgb(43, 199, 22);
+		--special__1__trs: rgba(43, 199, 22, 0.2);
+	}
+
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 8rem 2rem 6rem 2rem;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	align-items: center;
+
+	& > *:not(.home) {
+		border: 1px dashed var(--white__clr__trs2);
+		padding: 0.5rem;
+		border-radius: 12px;
+
+		.text-inputs,
+		.experience-details {
+			padding-top: 1rem;
+		}
+	}
+
+	.home {
+		position: absolute;
+		top: 3rem;
+		left: 2rem;
+
+		width: max-content;
+		background: var(--special__1__trs);
+		padding: 0.5rem;
+		border-radius: 50%;
+
+		display: grid;
+		place-items: center;
+	}
+
+	@media screen and (width <= 700px) {
+		padding-inline: 0.5rem;
+
+		.home {
+			top: 1.5rem;
+			left: 1rem;
+		}
+	}
+}

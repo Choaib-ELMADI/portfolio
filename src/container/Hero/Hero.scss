@@ -1,0 +1,117 @@
+.hero {
+	padding-top: 10rem;
+	padding-bottom: 20rem;
+	width: 100%;
+	max-width: 1000px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	&__top-section {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		align-items: center;
+
+		.divider {
+			width: 1px;
+			height: 20px;
+			background: var(--verywhite__clr);
+		}
+	}
+
+	h1 {
+		font-size: var(--verybig__size);
+		font-weight: 800;
+		color: var(--verywhite__clr);
+		display: inline-block;
+
+		label {
+			color: var(--special__1);
+		}
+
+		&.rtl {
+			direction: rtl;
+			text-align: right;
+		}
+
+		&.ltr {
+			direction: ltr;
+			text-align: left;
+		}
+	}
+
+	.domain {
+		color: var(--verywhite__clr);
+		display: inline-block;
+		font-size: calc(var(--medium__size) + 4px);
+
+		&__special {
+			color: var(--special__1);
+		}
+
+		&.rtl {
+			direction: rtl;
+			text-align: right;
+		}
+
+		&.ltr {
+			direction: ltr;
+			text-align: left;
+			line-height: 1.1;
+		}
+	}
+
+	.intro {
+		margin-top: 1rem;
+		color: var(--verywhite__clr);
+		font-size: var(--normal__size);
+		font-weight: 400;
+		line-height: calc(var(--normal__size) + 8px);
+		margin-bottom: 2rem;
+		width: 100%;
+		max-width: 700px;
+
+		&.rtl {
+			direction: rtl;
+			text-align: right;
+		}
+
+		&.ltr {
+			direction: ltr;
+			text-align: left;
+		}
+	}
+
+	.contact {
+		display: block;
+		width: max-content;
+
+		text-decoration: none;
+		color: var(--black__clr);
+		background: var(--special__1);
+		padding: 0.5rem 1.5rem;
+		font-size: var(--normal__size);
+		border-radius: 4px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.rtl {
+			direction: rtl;
+			text-align: right;
+		}
+
+		&.ltr {
+			direction: ltr;
+			text-align: left;
+		}
+	}
+
+	@media screen and (width <= 700px) {
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+	}
+}

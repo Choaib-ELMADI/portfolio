@@ -1,0 +1,87 @@
+.app__cv-wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+        color: var(--white__clr);
+        margin-bottom: .5rem;
+    }
+
+    .upload-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+
+        div {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            color: var(--white__clr);
+
+            img {
+                width: 60px;
+                aspect-ratio: 1;
+                object-fit: cover;
+            }
+
+            .upload-details {
+                font-size: var(--normal__size);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .25rem;
+            }
+
+            label {
+                font-size: var(--normal__size);
+                color: var(--special__1);
+                background: var(--special__1__trs);
+                border: 1px solid transparent;
+                padding: .4rem .2rem;
+                border-radius: 8px;
+                cursor: pointer;
+                margin-left: auto;
+                transition: .2s;
+                width: 180px;
+                text-align: center;
+
+                &:hover {
+                    border-color: currentColor;
+                }
+            }
+        }
+
+        .loading {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            height: 10px;
+            border-radius: 10px;
+            background: var(--gray__clr__trs);
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+
+            position: relative;
+            overflow: hidden;
+
+            .progress {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: var(--special__1);
+                transition: .2s;
+            }
+        }
+    }
+}

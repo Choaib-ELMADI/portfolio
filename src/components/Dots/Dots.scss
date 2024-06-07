@@ -1,0 +1,42 @@
+.dot-grid {
+    position: absolute;
+    top: 7rem;
+    right: 3.5rem;
+    z-index: 0;
+
+    max-width: 60%;
+    
+    display: grid;
+    
+    .dot-wrapper {
+        padding: .8rem;
+        cursor: crosshair;
+        transition: .2s background;
+        border-radius: 8px;
+        
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: linear-gradient(
+                to top right, 
+                var(--black__clr), 
+                var(--white__clr)
+            );
+            opacity: .35;
+        }
+
+        &:hover {
+            background: var(--gray__clr__trs);
+
+            .dot {
+                background: linear-gradient(
+                    to top right,
+                    var(--black__clr),
+                    var(--special__1)
+                ) !important;
+                opacity: 1 !important;
+            }
+        }
+    }
+}

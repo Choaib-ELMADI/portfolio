@@ -1,0 +1,96 @@
+.project-buttons {
+	margin-top: 1rem;
+
+	display: flex;
+	gap: 1rem;
+	overflow-x: auto;
+	// // justify-content: center;
+	// // flex-wrap: wrap;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	button {
+		font-size: calc(var(--normal__size) - 1px);
+		color: var(--white__clr);
+		padding: 0.25rem 1rem 0.4rem;
+		user-select: none;
+		white-space: nowrap;
+
+		background: transparent;
+		border: 1px solid var(--white__clr);
+		border-radius: 20px;
+		outline: none;
+		transition: background 0.2s, color 0.2s, border 0.2s;
+		cursor: pointer;
+
+		&:is(:hover, .active) {
+			background: var(--special__1__trs);
+			color: var(--special__1);
+			border-color: currentColor;
+		}
+	}
+
+	.btn-modal {
+		background: var(--gray__clr);
+		height: 2.35rem;
+		border-radius: 20px;
+
+		position: relative;
+		overflow: hidden;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -40%;
+			animation: loading 1s ease-in-out infinite,
+				blinking 1s ease-in-out infinite;
+
+			height: 6rem;
+			width: 1.5rem;
+			background: var(--gray__clr__trs);
+			transform: translateY(-50%) rotateZ(30deg);
+
+			@keyframes loading {
+				to {
+					left: 120%;
+				}
+			}
+
+			@keyframes blinking {
+				0%,
+				100% {
+					opacity: 1;
+				}
+				40% {
+					opacity: 0.2;
+				}
+				70% {
+					opacity: 1;
+				}
+			}
+		}
+
+		&:nth-child(1) {
+			width: 4rem;
+		}
+
+		&:nth-child(2) {
+			width: 6rem;
+		}
+
+		&:nth-child(3) {
+			width: 5rem;
+		}
+
+		&:nth-child(4) {
+			width: 7rem;
+		}
+
+		&:nth-child(5) {
+			width: 5rem;
+		}
+	}
+}

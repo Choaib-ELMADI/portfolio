@@ -1,0 +1,12 @@
+{
+	"Navbar": {
+		"resume": "Résumé"
+	},
+	"Hero": {
+		"name": "Salut, je suis Choaib",
+		"firstDomain": "Étudiant en systèmes embarqués",
+		"secondDomain": "Développeur Full-Stack",
+		"introduction": "En tant qu'enthousiaste des systèmes embarqués, j'ai cultivé mon expertise en me plongeant dans divers projets axés sur l'intégration matériel et logiciel. Ces aventures étaient auto-initiées, me permettant d'approfondir mes compétences techniques et d'explorer les complexités du développement des systèmes embarqués.",
+		"contact": "Contactez-moi"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"Navbar": {
+		"resume": "Resume"
+	},
+	"Hero": {
+		"name": "Hi, I'm Choaib",
+		"firstDomain": "Embedded Systems Student",
+		"secondDomain": "Full-Stack Developer",
+		"introduction": "As an embedded systems enthusiast, I've cultivated my expertise by delving into diverse projects focused on hardware and software integration. These ventures were self-initiated, allowing me to deepen my technical proficiencies and explore the intricacies of embedded systems development.",
+		"contact": "Contact me"
+	}
+}

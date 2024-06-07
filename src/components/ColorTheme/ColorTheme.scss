@@ -1,0 +1,28 @@
+.colors-container {
+	display: flex;
+	gap: 1rem;
+
+	label {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		position: relative;
+		cursor: pointer;
+
+		input {
+			display: none;
+		}
+
+		&:has(input[type="radio"]:checked)::after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			content: "";
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			border: 1px solid var(--c);
+			transform: translate(-50%, -50%);
+		}
+	}
+}

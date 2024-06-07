@@ -1,0 +1,139 @@
+.signin {
+	&.yellow {
+		--special__1: rgb(226, 239, 47);
+		--special__1__trs: rgba(226, 239, 47, 0.2);
+	}
+	&.red {
+		--special__1: rgb(239, 63, 47);
+		--special__1__trs: rgba(239, 63, 47, 0.2);
+	}
+	&.orange {
+		--special__1: rgb(226, 145, 30);
+		--special__1__trs: rgba(226, 145, 30, 0.2);
+	}
+	&.green {
+		--special__1: rgb(43, 199, 22);
+		--special__1__trs: rgba(43, 199, 22, 0.2);
+	}
+
+	display: grid;
+	place-items: center;
+
+	height: 100%;
+	min-height: 100vh;
+	padding: 4rem 0;
+
+	form {
+		width: 96%;
+		max-width: 500px;
+
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		position: relative;
+
+		.input-group {
+			display: flex;
+			flex-direction: column;
+			gap: 0.65rem;
+
+			label {
+				font-size: calc(var(--normal__size) - 2px);
+				color: var(--white__clr);
+			}
+
+			input {
+				background: var(--special__1__trs);
+				border: 0;
+				outline: none;
+				border-bottom: 2.5px solid var(--special__1);
+
+				color: var(--white__clr);
+				font-size: var(--normal__size);
+				padding: 0.5rem;
+
+				&::placeholder {
+					color: var(--white__clr);
+					font-size: var(--normal__size);
+				}
+			}
+		}
+
+		button {
+			background: transparent;
+			border: 1px dashed currentColor;
+			border-radius: 20px;
+			outline: none;
+
+			width: max-content;
+			padding: 0.5rem 1.25rem;
+			font-size: calc(var(--normal__size) + 3px);
+			color: var(--white__clr);
+			cursor: pointer;
+			transition: 0.2s;
+
+			&:hover {
+				color: var(--special__1);
+				background: var(--special__1__trs);
+			}
+		}
+
+		.return-home {
+			color: var(--special__1);
+			font-size: var(--normal__size);
+
+			position: absolute;
+			bottom: 0.35rem;
+			right: 0;
+		}
+
+		.login-error {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			backdrop-filter: blur(100px);
+			background: var(--red__clr__trs);
+			color: var(--special__1);
+
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			justify-content: center;
+			align-items: center;
+
+			h1 {
+				margin-bottom: 1.5rem;
+			}
+
+			.reset-error {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+
+				button {
+					border: 1px solid transparent;
+					padding: 0.25rem 0.6rem 0.4rem 0.6rem;
+					font-size: var(--normal__size);
+					background: transparent;
+
+					&:hover {
+						border-color: currentColor;
+					}
+				}
+
+				.back-home {
+					padding: 0.25rem 0.8rem 0.4rem 0.8rem;
+					color: var(--special__1);
+					font-size: var(--normal__size);
+					text-decoration: none;
+					background: var(--special__1__trs);
+					border-radius: 20px;
+				}
+			}
+		}
+	}
+}
