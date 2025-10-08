@@ -2,15 +2,15 @@
 
 # Portfolio Website
 
-This repository hosts my portfolio website. Explore my work, skills, and projects showcased here. Feel free to reach out for collaborations or feedback. Visit my website to learn more about me and my work.
+This repository contains an open-source portfolio website template. You can use it as a starting point to build and customize your own personal website. The structure is simple, flexible, and easy to adapt to different needs.
 
-## Open Source
+If you need further assistance while setting it up or want help connecting databases and deploying it, feel free to contact me.
 
-This project is open source, and you are welcome to use it to build your own website. If you encounter any issues or need assistance connecting your databases, don't hesitate to ask for help.
+You can also check my own portfolio to see how this template is used in action: [elmadichoaib.vercel.app](https://elmadichoaib.vercel.app).
 
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps.
+To get a local copy up and running, follow these simple steps:
 
 ### Prerequisites
 
@@ -21,16 +21,19 @@ To get a local copy up and running, follow these simple steps.
 ### Installation
 
 1. Clone the repo:
+
 ```sh
 git clone https://github.com/Choaib-ELMADI/portfolio.git
 ```
 
 2. Install NPM packages:
+
 ```sh
 npm install
 ```
 
 3. Start the development server:
+
 ```sh
 npm run dev
 ```
@@ -43,4 +46,7 @@ npm run dev
 
 - E-mail:
   - [choaibamd@gmail.com](mailto:choaibamd@gmail.com)
-  - [choaib3elmadi@gmail.com](mailto:choaib3elmadi@gmail.com)
+  - [choaibemd@gmail.com](mailto:choaibemd@gmail.com)
+
+- LinkedIn:
+  - [https://www.linkedin.com/in/choaib-elmadi](https://www.linkedin.com/in/choaib-elmadi)
